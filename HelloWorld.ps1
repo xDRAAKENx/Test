@@ -3,7 +3,6 @@ $myURI = "https://de.wikipedia.org/wiki/The_Mentalist/Episodenliste" <# replace 
 
 $req = Invoke-Webrequest -URI $myURI
 $tables = $req.ParsedHtml.getElementsByClassName($searchClass)
-
 $list = New-Object Collections.Generic.List[String]
 
 foreach ($table in $tables) {
